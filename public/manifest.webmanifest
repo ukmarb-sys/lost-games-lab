@@ -1,0 +1,14 @@
+{
+  "name": "ORBIT — Forgotten Paths",
+  "short_name": "ORBIT",
+  "description": "A loop-capture puzzle strategy game inspired by Surakarta.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0f0d0b",
+  "theme_color": "#0f0d0b",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

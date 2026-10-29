@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f0d0b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="ORBIT — Forgotten Paths. A loop-capture puzzle strategy game inspired by Surakarta. Lost Games Lab." />
+    <title>ORBIT — Forgotten Paths</title>
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <style>
+      html, body { margin: 0; padding: 0; height: 100%; background: #0f0d0b; overflow: hidden; }
+      body { touch-action: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+      #app { position: fixed; inset: 0; }
+      #app canvas { display: block; }
+      noscript { color: #e9dcc0; font-family: Georgia, serif; display: block; padding: 2em; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript>ORBIT needs JavaScript to run.</noscript>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
