@@ -61,7 +61,7 @@ Requires Node.js 18+ (CI uses 22).
 
 ```bash
 npm install
-npm run dev      # dev server on http://localhost:5173 (also exposed on your LAN)
+npm run dev      # dev server on http://localhost:5173/lost-games-lab/ (also exposed on your LAN)
 npm run test     # unit tests (Vitest)
 npm run build    # type-check + production build into dist/
 npm run preview  # serve the production build locally (also on your LAN)
@@ -70,18 +70,20 @@ npm run preview  # serve the production build locally (also on your LAN)
 ### Play on an Android phone (same Wi‑Fi)
 
 1. `npm run dev` (or `npm run build && npm run preview`).
-2. Vite prints a `Network:` URL such as `http://192.168.1.20:5173/`.
+2. Vite prints a `Network:` URL such as `http://192.168.1.20:5173/lost-games-lab/`.
 3. Open that URL in Chrome on the phone. Portrait orientation is recommended.
 4. Optional: Chrome menu ⋮ → **Add to Home screen** to launch it full-screen like an app.
 
 ## Deploy to GitHub Pages
 
-The Vite config uses a relative base (`base: './'`), so the build works from any sub-path,
-including `https://<user>.github.io/lost-games-lab/`. (Set `BASE_PATH=/some/path/` to force an
-absolute base if ever needed.)
+Live URL: **https://ukmarb-sys.github.io/lost-games-lab/**
+
+`vite.config.ts` sets `base: '/lost-games-lab/'` so all asset URLs match the GitHub Pages
+project sub-path. To host elsewhere, build with `BASE_PATH=/ npm run build` (or `BASE_PATH=./`).
 
 **Automatic (recommended):** `.github/workflows/deploy.yml` tests, builds and deploys on every push to `main`.
-1. GitHub → repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+1. One-time setup: GitHub → repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+   (Until this is done, the deploy job fails with `404 … Ensure GitHub Pages has been enabled`.)
 2. Merge/push to `main` (or run the workflow manually from the **Actions** tab).
 3. The game appears at `https://<user>.github.io/<repo>/`.
 
